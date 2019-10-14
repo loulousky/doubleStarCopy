@@ -1,0 +1,2 @@
+include ':app', ':base:baselibrary',':focutions:statusbar'
+rootProject.name='DoubleStars'
