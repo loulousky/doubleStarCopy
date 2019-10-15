@@ -15,7 +15,6 @@ class LoggerManager  private constructor(){
             LoggerManager()
         }
         fun getInstace():LoggerManager{
-
             return logger
         }
     }

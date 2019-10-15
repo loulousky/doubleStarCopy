@@ -1,5 +1,6 @@
 package com.liuhai.baselibrary;
 
+import android.app.Application;
 import android.content.Context;
 import android.text.TextUtils;
 
@@ -17,7 +18,8 @@ import java.io.IOException;
  */
 
 public abstract class BaseAppliction extends ForegroundAndBackgroundSwitchApp{
-    public static Context mContext;
+    public static Application mContext;
+
 
     @Override
     public void onCreate() {

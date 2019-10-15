@@ -29,14 +29,21 @@ abstract class BaseFragment<T:ViewDataBinding>:Fragment() {
         LoggerManager.getInstace().tag(this.toString())
 
         binding=DataBindingUtil.inflate(inflater,getContentViewId(),container,false)
-        bindToViewModel()
-
-
+        letsDoThings()
         return binding.root
     }
 
+
+    /**
+     * 要额外的操作可以重写这个方法来进行
+     */
+    fun letsDoThings(){
+
+      }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        bindToViewModel()
     }
 
     /**

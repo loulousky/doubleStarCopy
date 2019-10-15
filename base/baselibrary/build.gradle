@@ -51,6 +51,11 @@ dependencies {
     //recyclview
     api 'androidx.recyclerview:recyclerview:1.0.0'
 
+    //viewpager 配合tablayout 可以垂直滑动，还有特别简写方法
+    api 'androidx.viewpager2:viewpager2:1.0.0-beta05'
+
+    api "com.google.android.material:material:1.1.0-alpha09"
+
     //事件总线
     implementation 'com.hwangjr.rxbus:rxbus:1.0.6'
 
