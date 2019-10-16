@@ -13,6 +13,8 @@
             <option value="$PROJECT_DIR$/base/baselibrary" />
             <option value="$PROJECT_DIR$/focutions" />
             <option value="$PROJECT_DIR$/focutions/statusbar" />
+            <option value="$PROJECT_DIR$/submodels" />
+            <option value="$PROJECT_DIR$/submodels/homemodel" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
