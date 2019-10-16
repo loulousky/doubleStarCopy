@@ -2,7 +2,6 @@ package com.example.liuhai.homemodel.adapters
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.liuhai.homemodel.view.LHFindListView
 
 /**
  * 作者：liuhai
@@ -13,7 +12,7 @@ import com.example.liuhai.homemodel.view.LHFindListView
 class LHHomeadapters(fragment:Fragment):FragmentStateAdapter(fragment) {
     val tabs by lazy {
 
-        arrayOf(LHFindListView.getInstance("1"), LHFindListView.getInstance("1"), LHFindListView.getInstance("1"))
+        arrayOf(Fragment(), Fragment(), Fragment())
 
     }
     override fun getItemCount(): Int {

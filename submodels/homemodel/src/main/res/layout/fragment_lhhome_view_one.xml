@@ -83,7 +83,7 @@
                 app:tabIndicatorHeight="0dp"
                 app:tabPaddingBottom="5dp"
                 app:tabPaddingTop="5dp"
-                app:tabSelectedTextColor="@color/cardview_dark_background"
+                app:tabSelectedTextColor="@android:color/holo_orange_dark"
                 app:tabTextColor="@color/design_default_color_on_secondary" />
 
         </com.google.android.material.appbar.AppBarLayout>
