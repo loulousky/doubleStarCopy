@@ -29,6 +29,7 @@ abstract class BaseFragment<T:ViewDataBinding>:Fragment() {
         LoggerManager.getInstace().tag(this.toString())
 
         binding=DataBindingUtil.inflate(inflater,getContentViewId(),container,false)
+        binding.lifecycleOwner=this
         letsDoThings()
         return binding.root
     }

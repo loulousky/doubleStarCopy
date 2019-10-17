@@ -4,6 +4,7 @@ package com.liuhai.doublestars.view
 import android.view.View
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.Navigation
+import androidx.recyclerview.widget.RecyclerView
 import com.example.liuhai.base.BaseFragment
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -35,6 +36,7 @@ class LHHomeView: BaseFragment<FragmentLhhomeViewBinding>() {
             tab.setIcon(viewmodel.getHomeIcon()[position])
             tab.text = viewmodel.getHomeTabTitle()[position]
         }.attach()
+
 
     }
 

@@ -5,23 +5,27 @@
     <data>
         <variable
             name="data"
-            type="com.example.liuhai.homemodel.controller.LHFindListModel" />
+            type="com.example.liuhai.shopmodel.controller.LHShopModel" />
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".view.LHFindListView">
+        tools:context=".view.LHShopListView">
 
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
             android:layout_width="match_parent"
-            android:id="@+id/swiper"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:id="@+id/swiper">
+
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/recyclview"/>
+                android:id="@+id/recyclview" />
+
+
         </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
 </layout>

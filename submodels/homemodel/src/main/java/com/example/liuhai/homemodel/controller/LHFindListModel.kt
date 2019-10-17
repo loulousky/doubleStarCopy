@@ -19,26 +19,17 @@ class LHFindListModel(val type: String, application: Application) : AndroidViewM
     private  var pageNo:MutableLiveData<Int>? = null
           get() {
             if(field==null){
-
                 field= MutableLiveData(-1)
              }
               return field
          }
-
     //页面数据集合 页面只要监听这个数据集合即可
     val findlist: MediatorLiveData<MutableList<LHFindBean>> =
         MediatorLiveData<MutableList<LHFindBean>> ().apply {
             this.addSource(pageNo!!){
-                if(it==0) {
                     this.value = loadDataWithPage(it)
-                }else{
-
-                    this.value?.addAll(loadDataWithPage(it))
-                }
             }
         }
-
-
     /**
      * 下一页
      * 页数加一通知数据更新一页并添加到当前的列表中
@@ -46,10 +37,7 @@ class LHFindListModel(val type: String, application: Application) : AndroidViewM
      */
     fun nextPage() {
         pageNo?.postValue(pageNo?.value!!+1)
-
     }
-
-
     /**
      * 第一次加载。或者下拉刷新的加载
      */
@@ -57,8 +45,6 @@ class LHFindListModel(val type: String, application: Application) : AndroidViewM
        pageNo?.value=0
 
    }
-
-
     /**
      * 加载下一页
      */

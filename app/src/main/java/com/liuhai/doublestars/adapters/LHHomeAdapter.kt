@@ -3,6 +3,7 @@ package com.liuhai.doublestars.adapters
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.liuhai.homemodel.view.LHHomeVIEWOne
+import com.example.liuhai.shopmodel.view.LHShopListView
 import com.liuhai.doublestars.view.LHHomeView
 import java.lang.Exception
 
@@ -14,7 +15,7 @@ import java.lang.Exception
  */
 class LHHomeAdapter(fragment:Fragment) :FragmentStateAdapter(fragment) {
 
-  private  val pages= listOf(LHHomeVIEWOne(), LHHomeVIEWOne(), LHHomeVIEWOne(), LHHomeVIEWOne())
+  private  val pages= listOf(LHHomeVIEWOne(), LHShopListView(), LHHomeVIEWOne(), LHHomeVIEWOne())
 
     override fun getItemCount(): Int {
 

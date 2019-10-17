@@ -1,2 +1,2 @@
-include ':app', ':base:baselibrary',':focutions:statusbar', ':submodels:homemodel'
+include ':app', ':base:baselibrary',':focutions:statusbar', ':submodels:homemodel', ':submodels:shopmodel', ':submodels:authenticatemodel'
 rootProject.name='DoubleStars'
