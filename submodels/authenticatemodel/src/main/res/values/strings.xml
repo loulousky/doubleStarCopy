@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">authenticatemodel</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="jianbiechaxun">鉴别查询</string>
+    <string name="jiandingshi">鉴定师</string>
+    <string name="xinshoubikan">新手必看</string>
+    <string name="desc_au">美妆鉴别服务引领者</string>
+    <string name="num_au">累计鉴别美妆数</string>
+    <string name="au_wait">等待结果</string>
+    <string name="au_camer">拍摄细节</string>
+    <string name="au_choseer">选择系列</string>
 </resources>

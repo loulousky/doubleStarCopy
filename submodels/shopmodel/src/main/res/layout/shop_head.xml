@@ -14,7 +14,9 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:src="@drawable/default_goodimage"
+
+     />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -24,7 +26,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="@+id/imageView2"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:src="@drawable/default_goodimage" />
 
 
     <ImageView
@@ -40,7 +42,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:src="@drawable/default_goodimage"/>
 
     <ImageView
         android:id="@+id/imageView2"
@@ -50,7 +52,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toTopOf="@+id/imageView5"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:src="@drawable/default_goodimage" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -60,7 +62,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageView6"
         app:layout_constraintTop_toTopOf="@+id/imageView6"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:src="@drawable/default_goodimage" />
 
     <ImageView
         android:id="@+id/imageView6"
@@ -70,7 +72,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toTopOf="@+id/imageView3"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:src="@drawable/default_goodimage" />
 
     <TextView
         android:id="@+id/textView2"
@@ -142,7 +144,7 @@
         app:layout_constraintBottom_toTopOf="@+id/divider2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:src="@drawable/default_goodimage" />
 
     <ImageView
         android:id="@+id/imageView8"
@@ -155,7 +157,7 @@
         app:layout_constraintBottom_toTopOf="@+id/divider2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:src="@drawable/default_goodimage" />
 
     <View
         android:id="@+id/divider2"
@@ -163,6 +165,7 @@
         android:layout_height="0.5dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8"
         tools:layout_editor_absoluteY="357dp" />
 
     <TextView
@@ -173,7 +176,7 @@
         android:layout_marginLeft="24dp"
         android:text="TextView"
         app:layout_constraintStart_toEndOf="@+id/imageView7"
-        tools:layout_editor_absoluteY="279dp" />
+        app:layout_constraintTop_toTopOf="@+id/imageView7" />
 
     <TextView
         android:id="@+id/textView8"
@@ -182,9 +185,10 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
         app:layout_constraintEnd_toStartOf="@+id/imageView8"
         app:layout_constraintStart_toStartOf="@+id/textView7"
-        tools:layout_editor_absoluteY="314dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group2"
@@ -213,7 +217,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider2"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:src="@drawable/default_goodimage"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -38,6 +38,8 @@ dependencies {
     implementation project(':focutions:statusbar')
     implementation project(':submodels:homemodel')
     implementation project(':submodels:shopmodel')
+    implementation project(':submodels:authenticatemodel')
+    implementation project(':submodels:usermodel')
 
     
 

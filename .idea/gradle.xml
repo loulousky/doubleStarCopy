@@ -14,7 +14,10 @@
             <option value="$PROJECT_DIR$/focutions" />
             <option value="$PROJECT_DIR$/focutions/statusbar" />
             <option value="$PROJECT_DIR$/submodels" />
+            <option value="$PROJECT_DIR$/submodels/authenticatemodel" />
             <option value="$PROJECT_DIR$/submodels/homemodel" />
+            <option value="$PROJECT_DIR$/submodels/shopmodel" />
+            <option value="$PROJECT_DIR$/submodels/usermodel" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

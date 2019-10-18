@@ -44,7 +44,6 @@ class LHShopListView : BaseFragment<FragmentLhshopListViewBinding>() {
         models.goodlist.observe(this, Observer {
             val pre=shops.size-1;
             shops.addAll(it)
-            adapter.notifyItemRangeInserted(pre,it.size)
 
         })
         //不满一页的时候出现加载更多解决
