@@ -3,4 +3,17 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="userinfo">个人信息</string>
+    <string name="usericon">头像</string>
+    <string name="username">昵称</string>
+    <string name="usernumber">手机号码</string>
+    <string name="userchangenumber">更改手机号</string>
+    <string name="bindalipay">绑定支付宝</string>
+    <string name="bindalipaudesc">绑定收款账号</string>
+    <string name="userauth">我的鉴别</string>
+    <string name="usershop">购买订单</string>
+    <string name="usersales">我的出售</string>
+    <string name="allnewsales">全新出售</string>
+    <string name="salesdesc">全新品 技术服务费3.5%</string>
+    <string name="saleing">出售中</string>
 </resources>
