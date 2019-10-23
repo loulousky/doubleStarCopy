@@ -1,5 +1,6 @@
 package com.example.liuhai.base
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.AndroidViewModel
+import com.example.liuhai.event.RxBusManager
 import com.liuhai.logger.LoggerManager
 
 /**
@@ -26,6 +28,7 @@ abstract class BaseFragment<T:ViewDataBinding>:Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        RxBusManager.getInstance().register(this)
         LoggerManager.getInstace().tag(this.toString())
 
         binding=DataBindingUtil.inflate(inflater,getContentViewId(),container,false)
@@ -38,7 +41,7 @@ abstract class BaseFragment<T:ViewDataBinding>:Fragment() {
     /**
      * 要额外的操作可以重写这个方法来进行
      */
-    fun letsDoThings(){
+   open fun letsDoThings(){
 
       }
 
@@ -69,6 +72,17 @@ abstract class BaseFragment<T:ViewDataBinding>:Fragment() {
      * 当前acitivity的布局layout传递
      */
     abstract  fun getContentViewId():Int
+
+
+    override fun onDestroy() {
+        RxBusManager.getInstance().unregister(this)
+        super.onDestroy()
+    }
+
+
+
+
+
 
 
 

@@ -8,19 +8,19 @@
     <fragment
         android:id="@+id/LHHomeView"
         android:name="com.liuhai.doublestars.view.LHHomeView"
-        android:label="fragment_lhhome_view"
-        tools:layout="@layout/fragment_lhhome_view" >
+        android:label="fragment_lhhome_view">
+
         <action
-            android:id="@+id/action_LHHomeView_to_LHFindListView"
-            app:destination="@+id/LHFindListView"
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim"
-            app:popUpTo="@+id/LHHomeView" />
+            android:id="@+id/action_LHHomeView_to_LHFindDetailView2"
+            app:destination="@id/LHFindDetailView2" />
     </fragment>
     <fragment
-        android:id="@+id/LHFindListView"
-        android:name="com.example.liuhai.homemodel.view.LHFindListView"
-        android:label="LHFindListView" />
+        android:id="@+id/LHFindDetailView2"
+        android:name="com.example.liuhai.homemodel.view.LHFindDetailView"
+        android:label="LHFindDetailView" >
+        <action
+            android:id="@+id/action_LHFindDetailView2_to_LHHomeView"
+            app:destination="@id/LHHomeView"
+           />
+    </fragment>
 </navigation>

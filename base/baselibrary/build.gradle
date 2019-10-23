@@ -57,7 +57,10 @@ dependencies {
     api "com.google.android.material:material:1.1.0-alpha09"
 
     //事件总线
-    implementation 'com.hwangjr.rxbus:rxbus:1.0.6'
+    api 'com.hwangjr.rxbus:rxbus:1.0.6'
+
+    //压缩图片
+    api 'top.zibin:Luban:1.1.8'
 
     //log日志
     implementation 'com.jakewharton.timber:timber:4.7.1'

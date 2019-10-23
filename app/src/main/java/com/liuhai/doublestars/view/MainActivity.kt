@@ -2,6 +2,7 @@ package com.liuhai.doublestars.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.Navigation
@@ -18,4 +19,9 @@ class MainActivity : AppCompatActivity() {
         StatusBarUtils.setStatusbarWithLightorDark(this,false)
 
     }
+
+
+
+
+
 }

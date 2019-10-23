@@ -3,11 +3,12 @@ import android.app.Application
 import android.view.View
 import androidx.lifecycle.AndroidViewModel
 import androidx.navigation.Navigation
+import com.example.liuhai.event.RxBusManager
+import com.liuhai.`interface`.LHHomeInterface
+import com.liuhai.baselibrary.BaseAndroidViewModel
 import com.liuhai.doublestars.R
 
-class LHHomeViewModels(application:Application) :AndroidViewModel(application) {
-
-
+class LHHomeViewModels(application:Application) :BaseAndroidViewModel(application){
 
 
 
@@ -34,5 +35,9 @@ class LHHomeViewModels(application:Application) :AndroidViewModel(application) {
     //结束的时候调用 viewmodel的生命周期比activity和 fragment的生命周期要长
     override fun onCleared() {
         super.onCleared()
+
+
     }
+
+
 }

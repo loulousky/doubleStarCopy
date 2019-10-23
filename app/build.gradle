@@ -41,8 +41,6 @@ dependencies {
     implementation project(':submodels:authenticatemodel')
     implementation project(':submodels:usermodel')
 
-    
-
 
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.12'

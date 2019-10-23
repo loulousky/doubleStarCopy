@@ -15,6 +15,7 @@ object  RxBusManager{
 fun getInstance(): Bus {
 
 
+
 return  RxBus.get()
 }
 

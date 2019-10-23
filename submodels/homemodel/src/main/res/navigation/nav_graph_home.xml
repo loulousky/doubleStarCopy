@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/LHFindDetailView">
+    <fragment
+        android:id="@+id/LHFindDetailView"
+        android:name="com.example.liuhai.homemodel.view.LHFindDetailView"
+        android:label="LHFindDetailView" >
+        <action
+            android:id="@+id/action_LHFindDetailView_to_LHCommentView"
+            app:destination="@id/LHCommentView"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/LHCommentView"
+        android:name="com.example.liuhai.comment.LHCommentView"
+        android:label="LHCommentView" >
+        <action
+            android:id="@+id/action_LHCommentView_to_LHFindDetailView"
+            app:destination="@id/LHFindDetailView" />
+    </fragment>
+</navigation>

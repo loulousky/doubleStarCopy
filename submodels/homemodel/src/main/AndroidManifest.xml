@@ -1,2 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.liuhai.homemodel" />
+    package="com.example.liuhai.homemodel">
+
+    <application>
+        <activity android:name=".view.LHFindDeataileContainer"
+            android:windowSoftInputMode="adjustPan"
+            ></activity>
+    </application>
+
+</manifest>
