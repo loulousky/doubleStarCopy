@@ -70,10 +70,17 @@ class LHFindListView : BaseFragment<FragmentLhfindListViewBinding>() {
         binding.recyclview.layoutManager = layoutmananger
         val adapter = LHFindListAdapter(R.layout.find_item, datalist, this)
 
-        adapter.setOnItemClickListener { _, _, _ ->
+        adapter.setOnItemClickListener { _, _, position ->
 
-
+            if(datalist.get(position).video){
+                startActivity(Intent(activity,LHFindDetaileVideoContainer::class.java))
+            }else{
                 startActivity(Intent(activity,LHFindDeataileContainer::class.java))
+            }
+
+
+
+
 
 
 

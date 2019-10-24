@@ -51,7 +51,13 @@ class LHFindListModel(val type: String, application: Application) : AndroidViewM
     private fun loadDataWithPage(page:Int):MutableList<LHFindBean>{
         val data:MutableList<LHFindBean> =ArrayList<LHFindBean>()
         for ( i in 0..19){
-            data.add(  LHFindBean("测试账号${i}","测试描述${i}","","",false,i))
+            if(i%2==0)
+            {
+                data.add(  LHFindBean("测试账号${i}","测试描述${i}","","",true,i))
+            }else{
+                data.add(  LHFindBean("测试账号${i}","测试描述${i}","","",false,i))
+            }
+
         }
         return data
    }

@@ -73,10 +73,56 @@ public class BitmapUtil {
      * @return
      */
     public static Bitmap viewToBitmap(View view) {
+
+        //允许当前窗口保存缓存信息
         view.setDrawingCacheEnabled(true);
         view.buildDrawingCache();
-        Bitmap bm = view.getDrawingCache();
-        return bm;
+
+
+
+
+        // 全屏不用考虑状态栏，有导航栏需要加上导航栏高度
+        Bitmap bitmap = null;
+        try {
+            bitmap = Bitmap.createBitmap(view.getDrawingCache(), 0, 0, view.getWidth(),
+                    view.getHeight());
+        } catch (Exception e) {
+            // 这里主要是为了兼容异形屏做的处理，我这里的处理比较仓促，直接靠捕获异常处理
+            // 其实vivo oppo等这些异形屏手机官网都有判断方法
+            // 正确的做法应该是判断当前手机是否是异形屏，如果是就用下面的代码创建bitmap
+
+
+            String msg = e.getMessage();
+            // 部分手机导航栏高度不占窗口高度，不用添加，比如OppoR15这种异形屏
+            if (msg.contains("<= bitmap.height()")){
+                try {
+                    bitmap = Bitmap.createBitmap(view.getDrawingCache(), 0, 0,  view.getWidth(),
+                            view.getHeight());
+                } catch (Exception e1) {
+                    msg = e1.getMessage();
+                    // 适配Vivo X21异形屏，状态栏和导航栏都没有填充
+                    if (msg.contains("<= bitmap.height()")) {
+                        try {
+                            bitmap = Bitmap.createBitmap(view.getDrawingCache(), 0, 0,  view.getWidth(),
+                                   view.getHeight());
+                        } catch (Exception e2) {
+                            e2.printStackTrace();
+                        }
+                    }else {
+                        e1.printStackTrace();
+                    }
+                }
+            }else {
+                e.printStackTrace();
+            }
+        }
+
+        //销毁缓存信息
+        view.destroyDrawingCache();
+        view.setDrawingCacheEnabled(false);
+
+
+        return bitmap;
     }
 
 
@@ -676,7 +722,7 @@ public class BitmapUtil {
 
 
 
-    public static  void saveImage(Context context, Bitmap bitmap)
+    public static  void saveImage(Context context, Bitmap bitmap,String name)
 
     {
 
@@ -692,7 +738,7 @@ public class BitmapUtil {
 
             }
 
-            File file =new File(newFileDir, "temp1.jpg");
+            File file =new File(newFileDir, name+".jpg");
 
 
 //打开文件输出流

@@ -18,7 +18,10 @@ import com.example.liuhai.statusbar.StatusBarUtils
 import com.liuhai.other.SoftKeyBoardListener
 import android.content.Context.INPUT_METHOD_SERVICE
 import android.graphics.BitmapFactory
+import android.os.Bundle
 import android.os.Environment
+import android.view.LayoutInflater
+import android.view.ViewGroup
 import androidx.core.content.ContextCompat.getSystemService
 import androidx.lifecycle.ViewModelProviders
 import com.example.liuhai.comment.controller.LHCommentModels
@@ -34,28 +37,40 @@ class LHCommentView : BaseFragment<FragmentLhcommentViewBinding>() {
 
 
     val model:LHCommentModels by lazy {
-
         ViewModelProviders.of(this).get(LHCommentModels::class.java)
     }
+    var bb:Bitmap?=null
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        StatusBarUtils.setStatusBarTranslucent(activity)
+        return super.onCreateView(inflater, container, savedInstanceState)
+    }
+
     override fun bindToViewModel() {
         binding.lifecycleOwner=this
 
     }
 
     override fun getContentViewId(): Int {
+
         return   R.layout.fragment_lhcomment_view
     }
 
     override fun letsDoThings() {
         super.letsDoThings()
-        StatusBarUtils.setStatusBarTranslucent(activity)
+
 
         binding.imageView.let {
 
-            val path=context!!.getExternalFilesDir(Environment.DIRECTORY_PICTURES).toString()+File.separator+"temp1.jpg"
+            var name=arguments?.getString("imagename")
+            val path=context!!.getExternalFilesDir(Environment.DIRECTORY_PICTURES).toString()+File.separator+"temp"+File.separator+name+".jpg"
             val bitmapOptions=BitmapFactory.Options()
             bitmapOptions.inPreferredConfig=Bitmap.Config.RGB_565
-           val bb= BitmapFactory.decodeFile(path,bitmapOptions)
+            bb= BitmapFactory.decodeFile(path,bitmapOptions)
             it.setImageBitmap(bb)
 
         }
@@ -87,14 +102,15 @@ class LHCommentView : BaseFragment<FragmentLhcommentViewBinding>() {
         super.onPause()
     }
     override fun onStop() {
-
         super.onStop()
         //关闭软键盘
-
-
-
     }
 
+    override fun onDestroy() {
+        bb?.recycle()
+        bb=null
+        super.onDestroy()
+    }
 
 
     /**

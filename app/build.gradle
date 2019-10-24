@@ -12,7 +12,10 @@ android {
     dataBinding {
         enabled = true
     }
-
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
     defaultConfig {
         applicationId "com.liuhai.doublestars"
         minSdkVersion 16
@@ -20,6 +23,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -40,7 +44,8 @@ dependencies {
     implementation project(':submodels:shopmodel')
     implementation project(':submodels:authenticatemodel')
     implementation project(':submodels:usermodel')
-
+// 引入multidex库
+    implementation 'com.android.support:multidex:1.0.3'
 
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.12'

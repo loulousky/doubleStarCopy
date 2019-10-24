@@ -1,6 +1,7 @@
 package com.liuhai.doublestars.other
 
 import android.content.Context
+import androidx.multidex.MultiDex
 import com.liuhai.baselibrary.BaseAppliction
 import com.liuhai.logger.LoggerManager
 
@@ -12,6 +13,11 @@ import com.liuhai.logger.LoggerManager
  */
 class LHApplication :BaseAppliction() {
 
+
+    override fun attachBaseContext(base: Context?) {
+        super.attachBaseContext(base)
+        MultiDex.install(this)
+    }
 
     /**
      * 多进程实例化
@@ -25,6 +31,7 @@ class LHApplication :BaseAppliction() {
      * 主进程实例化
      */
     override fun executeInAnyProcess() {
+
 
     }
 

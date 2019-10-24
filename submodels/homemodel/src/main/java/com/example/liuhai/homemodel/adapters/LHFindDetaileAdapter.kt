@@ -58,6 +58,14 @@ class LHFindDetaileAdapter(layoutResId: Int, data: List<LHFindDetailBean>, var f
                 fragment
             )
         }
+        binding?.imageView3?.let {
+
+            it.setOnClickListener {
+
+                fragment.findNavController().navigate(R.id.action_LHFindDetailView_to_LHCommentListView)
+            }
+
+        }
 
         binding?.textView2?.text = "查看全部${item?.messages?.size}条评论"
 
@@ -65,15 +73,16 @@ class LHFindDetaileAdapter(layoutResId: Int, data: List<LHFindDetailBean>, var f
 
             val bb = BitmapUtil.viewToBitmap(fragment.view)
 
-            BitmapUtil.saveImage(mContext, bb)
+            BitmapUtil.saveImage(mContext, bb,"temp1")
             bb.recycle()
 
 
 
 //
 //
-
-            fragment.findNavController().navigate(R.id.action_LHFindDetailView_to_LHCommentView)
+            var bundle=Bundle()
+            bundle.putString("imagename","temp1")
+            fragment.findNavController().navigate(R.id.action_LHFindDetailView_to_LHCommentView,bundle)
 
         }
 
