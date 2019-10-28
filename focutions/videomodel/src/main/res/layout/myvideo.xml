@@ -177,6 +177,7 @@
             android:layout_height="wrap_content"
             android:textSize="16sp"
             android:text="评论xxx"
+            android:id="@+id/commentname"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="16dp"
             android:layout_gravity="center_vertical"

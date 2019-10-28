@@ -33,7 +33,7 @@ abstract class BaseFragment<T:ViewDataBinding>:Fragment() {
 
         binding=DataBindingUtil.inflate(inflater,getContentViewId(),container,false)
         binding.lifecycleOwner=this
-        letsDoThings()
+
         return binding.root
     }
 
@@ -48,6 +48,7 @@ abstract class BaseFragment<T:ViewDataBinding>:Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         bindToViewModel()
+        letsDoThings()
     }
 
     /**
